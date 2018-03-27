@@ -2,11 +2,14 @@
   {{ project.name }}
   <!-- Show different usages of ngClass and ngStyle"-->
   <span
-    class="label label-default">{{ project.status }}</span>
+    class="badge"
+    [ngClass]="{'badge-success': project.status === 'active', 'badge-danger': project.status === 'critical', 'badge-secondary': project.status === 'inactive'}">
+    {{ project.status }}
+  </span>
 </h3>
 <hr>
 <p>{{ project.description }}</p>
-<select #prjStatus class="form-control">
+<select #prjStatus class="form-control d-inline-block w-50">
   <option value="active" [selected]="project.status === 'active'">Active</option>
   <option value="inactive" [selected]="project.status === 'inactive'">Inactive</option>
   <option value="critical" [selected]="project.status === 'critical'">Critical</option>

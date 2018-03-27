@@ -1,0 +1,11 @@
+.marked {
+  border: 2px solid blue;
+  padding: 19px;
+}
+.highlighted {
+  background-color: #ffff00;
+}
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}

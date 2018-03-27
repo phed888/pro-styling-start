@@ -20,7 +20,11 @@ export class ProjectComponent implements OnInit {
   onUpdateStatus(newStatus: string) {
     this.statusUpdated.emit(newStatus);
   }
+  onSetBadgeColor(status:string) {
+    return {
 
+    };
+  }
   onDelete() {
     this.projectDeleted.emit();
   }
